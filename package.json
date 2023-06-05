@@ -1,0 +1,23 @@
+{
+  "name": "bingm-staic",
+  "version": "1.0.0",
+  "description": "bingm static file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eudav/bingm-static.git"
+  },
+  "keywords": [
+    "static",
+    "file"
+  ],
+  "author": "bingm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eudav/bingm-static/issues"
+  },
+  "homepage": "https://github.com/eudav/bingm-static#readme"
+}
