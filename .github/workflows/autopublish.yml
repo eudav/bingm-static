@@ -1,4 +1,4 @@
-name: Deploy to NPM CDN
+name: Node.js Package
 'on':
   - workflow_dispatch
   - push
@@ -14,4 +14,3 @@ jobs:
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
-
