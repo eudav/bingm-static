@@ -5,7 +5,7 @@ with open('package.json', 'r',encoding='utf-8') as f:
     jspack = json.load(f)
 
 # 获取当前版本号
-current_version = data['version']
+current_version = jspack['version']
 
 # 递增版本号
 major, minor, patch = map(int, current_version.split('.'))
