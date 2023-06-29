@@ -1,7 +1,7 @@
 import json
 
 # 读取 package.json 文件
-with open('package.json', 'r') as file:
+with open('package.json', 'r',encoding='utf-8') as file:
     data = json.load(file)
 
 # 获取当前版本号
@@ -16,5 +16,5 @@ new_version = f"{major}.{minor}.{patch}"
 data['version'] = new_version
 
 # 写入更新后的 package.json 文件
-with open('package.json', 'w') as file:
-    json.dump(data, file, indent=4)
+with open('package.json', 'w',encoding='utf-8') as file:
+    json.dump(data, file,ensure_ascii=False)
