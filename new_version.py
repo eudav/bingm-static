@@ -1,16 +1,11 @@
 import json;
+import time;
 
 with open("package.json", 'r', encoding='utf-8') as f:
     jspack = json.load(f)
 
-current_version = jspack['version']
-
-
-major, minor, patch = map(int, current_version.split('.'))
-patch += 1
-new_version = f"{major}.{minor}.{patch}"
-
-jspack['version'] = new_version
-
+new_version = '1.1.' + str(int(time.time()))[1:11:1]
+hort_version = new_version[:5]  # 截取前 5 个字符
+jspack['version'] = hort_version
 with open("package.json", 'w', encoding='utf-8') as f:
     json.dump(jspack, f, ensure_ascii=False)
