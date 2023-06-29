@@ -1,8 +1,8 @@
-import json
+import json;
 
 # 读取 package.json 文件
-with open('package.json', 'r',encoding='utf-8') as file:
-    data = json.load(file)
+with open('package.json', 'r',encoding='utf-8') as f:
+    jspack = json.load(f)
 
 # 获取当前版本号
 current_version = data['version']
@@ -13,8 +13,8 @@ patch += 1
 new_version = f"{major}.{minor}.{patch}"
 
 # 更新版本号
-data['version'] = new_version
+jspack['version'] = new_version
 
 # 写入更新后的 package.json 文件
-with open('package.json', 'w',encoding='utf-8') as file:
-    json.dump(data, file,ensure_ascii=False)
+with open('package.json', 'w',encoding='utf-8') as f:
+    json.dump(jspack, f,ensure_ascii=False)
